@@ -1,14 +1,5 @@
-# Snipcart + Gatsby + DatoCMS example
+# Black Royal App
 
-This is a demo project to get you started with a static ecommerce site powered by [Gatsby](https://www.gatsbyjs.org/), [Snipcart](https://snipcart.com/) and [DatoCMS](https://www.datocms.com/).
-
-It's a brutalist socks ecommerce site, that looks like this:
-
-![Socks ecommerce screenshot](./preview.png)
-
-You can see how it looks live on this [demo installation](https://datocms-snipcart-gatsby-demo.netlify.com/).
-
-All the details on how this works on the [related blog post](https://www.datocms.com/blog/static-ecommerce-website-snipcart-gatsbyjs-datocms).
 
 ## Deploy on DatoCMS
 
@@ -18,8 +9,10 @@ If you want to set up a live demo for yourself, just [sign up for a free DatoCMS
 
 ## Usage
 
-To run this project locally, install the dependencies of this project:
-
+1. Run `yarn install`
+1. Run `yarn global add gatsby-cli`
+1. Run `gatsby develop`
+1. Application should be running locally at `http://localhost:8000/`
 ```
 yarn install
 ```

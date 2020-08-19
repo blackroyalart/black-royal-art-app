@@ -6,8 +6,8 @@ import Link from 'gatsby-link'
 import '../style/index.scss'
 
 const Layout = ({ children, site }) => (
-  <div>
-    <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
+  <div className="page-container">
+    <Helmet title="Black Royal Art" />
     <div className="Container">
       <div className="Header">
         <div className="Wrap" >
@@ -17,29 +17,34 @@ const Layout = ({ children, site }) => (
                 {site.siteMetadata.siteName}
               </Link>
             </h1>
-            <div className="Header__summary snipcart-summary snipcart-checkout">
-              <div className="Header__summary__title">
-                🛍 MY CART 🛍
-              </div>
-              <div className="Header__summary__line">
-                Number of items: <span className="snipcart-total-items"></span>
-              </div>
-              <div className="Header__summary__line">
-                Total price: <span className="snipcart-total-price"></span>
-              </div>
+            <div>
+              <Link data-text="shop" to="/shop">
+                Shop
+              </Link>
+              <Link data-text="art" to="/art">
+                Art
+              </Link>
+              <Link data-text="about" to="/about">
+                About
+              </Link>
             </div>
+            
           </div>
         </div>
       </div>
+      <div className="Landing">
+
+      </div>
       <div className="Wrap" >
+        <div className="page-container">
         {children}
-      </div>
-      <div className="Wrap" >
-        <div className="Footer">
-          This website is just an example project to demonstrate how you can 
-          integrate <a href="https://www.gatsbyjs.org/">Gatsby</a>, <a href="https://snipcart.com/">Snipcart</a> and <a href="https://www.datocms.com">DatoCMS</a>.
         </div>
+
       </div>
+        
+    </div>
+    <div className="Footer">
+      Footer here
     </div>
   </div>
 )

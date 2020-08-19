@@ -1,12 +1,14 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Layout from "../layouts/index"
-import Img from 'gatsby-image'
+import Hero from "../component/hero"
+import InstagramFeed from "../component/InstagramFeed"
+
 
 export default () => (
   <StaticQuery
     query={graphql`
-      query CatalogueQuery {
+      query {
         products: allDatoCmsProduct {
           edges {
             node {
@@ -30,36 +32,28 @@ export default () => (
       }
     `}
 render={data => (
+  <>
+  <Hero title="Black Royal Art"/>
   <Layout site={data.site}>
-    <div className="Catalogue">
-      {
-        data.products.edges.map(({ node: product }) => (
-          <div className="Catalogue__item" key={product.id}>
-            <div
-              className="Product snipcart-add-item"
-              data-item-id={product.id}
-              data-item-price={product.price}
-              data-item-image={product.image.url}
-              data-item-name={product.name}
-              data-item-url={`/`}
-            >
-              <div className="Product__image">
-                <Img sizes={product.image.sizes} />
-              </div> <div className="Product__details">
-                <div className="Product__name">
-                  {product.name}
-                  <div className="Product__price">
-                    {product.price}€
-                  </div>
-                </div>
-                <span className="Product__buy">Buy now</span>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+    
+    <div>
+      <div className="body">
+        <img src="https://i.gyazo.com/4c0a5f665303a483ead995a5758b97bc.jpg"/>
+        <div>
+          <h1>Hi I am Eva</h1>
+          <p>
+            Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+            Tincidunt morbi aliquet sodales
+            curabitur sollicitudin imperdiet
+            rhoncus. Ultricies egestas tellus
+            risus erat amet in elit.
+          </p>
+        </div>
+      </div>
+      <InstagramFeed/>
     </div>
-  </Layout>
+  </Layout></>
      )}
    />
 )

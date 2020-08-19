@@ -15,11 +15,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-body {
-  line-height: 1.5;
-  font-family: consolas, Menlo, monospace, sans-serif;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -39,5 +34,28 @@ table {
 }
 
 body {
-  background: linear-gradient(to bottom, white, cyan, white, MediumVioletRed, white, Green, white, cyan)
+  line-height: 1.5;
+  font-family: "times new roman", times, serif;
+  background: #fff;
+  margin-top: 6em;
+}
+
+
+.body {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 20% 0px;
+}
+
+.body img {
+  width: 50%;
+  height: auto;
+  padding-right: 20px;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100%;
 }
