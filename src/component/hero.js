@@ -1,5 +1,5 @@
 import React from 'react'
-import landingPicture from '../../public/img/placeholder_landing.jpg'; 
+import landingPicture from '../img/placeholder_landing.jpg'; 
 
 const Hero = ({page, title}) => {
   const style = {
