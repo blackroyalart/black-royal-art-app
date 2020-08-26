@@ -1,59 +1,32 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Layout from "../layouts/index"
+import Layout from "../layout/index"
 import Hero from "../component/hero"
+
 import InstagramFeed from "../component/InstagramFeed"
+import { Container, Row, Col } from 'reactstrap'
 
+import '../style/home.scss'
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        products: allDatoCmsProduct {
-          edges {
-            node {
-              id
-              name
-              price
-              image {
-                url
-                sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-                  ...GatsbyDatoCmsSizes
-                }
-              }
-            }
-          }
-        }
-        site {
-          siteMetadata {
-            siteName
-          }
-        }
-      }
-    `}
-render={data => (
-  <>
-  <Hero title="Black Royal Art"/>
-  <Layout site={data.site}>
-    
-    <div>
-      <div className="body">
-        <img src="https://i.gyazo.com/4c0a5f665303a483ead995a5758b97bc.jpg"/>
-        <div>
-          <h1>Hi I am Eva</h1>
-          <p>
-            Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit.
-            Tincidunt morbi aliquet sodales
-            curabitur sollicitudin imperdiet
-            rhoncus. Ultricies egestas tellus
-            risus erat amet in elit.
-          </p>
-        </div>
-      </div>
-      <InstagramFeed/>
-    </div>
-  </Layout></>
-     )}
-   />
-)
+export default function Index() {
+  return(
+    <>
+      <Layout>
+        <Hero title="Black Royal Art"/>
+        
+        <Container className="themed-container" fluid="sm">
+          <Row className="about-me">
+            <Col xs="6">.col-3</Col>
+            <Col xs="6">
+              <h1>Hi I am Eva Odoom</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis risus. Cras nec libero volutpat, tempor leo cursus, condimentum ipsum. Quisque quis est nec enim mollis convallis nec ac felis. Donec libero risus, tristique a felis consectetur, dignissim vestibulum urna. Sed ac magna fermentum, condimentum felis pretium, tempor arcu. Cras orci felis, imperdiet quis nibh et, convallis aliquam enim. Suspendisse condimentum massa quis eros mattis, eu lacinia urna sagittis. Mauris cursus sapien ut libero tristique suscipit.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+        <InstagramFeed/>
+      </Layout>
+    </>
+  )
+}

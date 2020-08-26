@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "dependencies": {
+    "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.22.12",
     "gatsby-cli": "^2.12.87",
@@ -15,10 +16,12 @@
     "gatsby-plugin-snipcart": "^1.1.2",
     "gatsby-source-datocms": "^2.2.4",
     "node-sass": "^4.12.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-bootstrap-icons": "^1.0.3-alpha5",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.0",
-    "react-instagram-embed": "^1.5.0"
+    "react-instagram-embed": "^1.5.0",
+    "reactstrap": "^8.5.1"
   },
   "keywords": [
     "gatsby"

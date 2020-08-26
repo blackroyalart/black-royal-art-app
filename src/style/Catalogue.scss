@@ -1,17 +1,13 @@
-.Catalogue {
-  margin: 16vh 0;
-}
-
 .Catalogue__item {
   margin-bottom: 60px;
 }
 
 @media screen and (min-width: 600px) {
-  .Catalogue {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+  // .Catalogue {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   flex-wrap: wrap;
+  // }
 
   .Catalogue__item {
     width: 45%;
@@ -21,7 +17,7 @@
 @media screen and (min-width: 900px) {
   .Catalogue {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
   }
 
