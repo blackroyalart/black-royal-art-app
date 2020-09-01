@@ -12,6 +12,8 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import '../style/Header.scss'
+import { Cart4 as CartIcon } from 'react-bootstrap-icons';
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,21 +21,26 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar color="light" light expand="md" fixed="top" >
+    <Navbar className="header" color="white" expand="md" fixed="top" >
       <NavbarBrand href="/" navbar>Black Royal Art</NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/art">Art</NavLink>
+            <NavLink href="/art">My Art</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/shop">Shop</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/about">About</NavLink>
+            <NavLink href="/about">About Me</NavLink>
           </NavItem>
         </Nav>
+        <div className="shopping-cart">
+          <div className="Header__summary snipcart-summary snipcart-checkout">      
+            <CartIcon className="cart-button" width={20} height={40}/>
+          </div>
+        </div>
       </Collapse>
     </Navbar>
   );

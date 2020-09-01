@@ -1,12 +1,10 @@
-.Footer {
+.footer {
   bottom: 0px;
-  position: absolutee;
+  position: relative;
   margin: auto;
   width: 100%;
   min-height: 200px;
-  font-family: "times new roman", times, serif;
   font-style: italic;
-  background-color: cornflowerblue;
   padding: 20px 30px;
 
   a {

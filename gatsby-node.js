@@ -1,7 +1,39 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allDatoCmsProduct {
+        edges {
+          node {
+            id
+            name
+          }
+        }
+      }
+    }
+  `)
+  data.allDatoCmsProduct.edges.forEach(edge => {
+    const {name, id} = edge.node
+    actions.createPage({
+      path: name,
+      component: require.resolve(`./src/layouts/product-detail.js`),
+      context: { 
+        slug: name,
+        id: id
+      },
+    })
+  })
+}
 
- // You can delete this file if you're not using it
+// edges {
+//   node {
+//     id
+//     name
+//     price
+//     image {
+//       url
+//       sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
+//         ...GatsbyDatoCmsSizes
+//       }
+//     }
+//   }
+// }
