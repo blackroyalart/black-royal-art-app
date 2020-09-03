@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from "../layout/index"
+import Layout from "../layout/site-layout"
 import { Container, Row, Col } from 'reactstrap';
 
 const Art = () => (

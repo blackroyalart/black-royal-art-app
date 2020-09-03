@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display&display=swap');
 
 nav {
-  a, a:hover {
-    font-family: 'Lato', sans-serif;
+  a {
+    font-size: 1.25rem;
+    font-family: 'Playfair Display', serif;
     color: black;
   }
-  
+}
+
+a.nav-brand {
+  font-size: 1.75rem;
 }
 
 // .Header {

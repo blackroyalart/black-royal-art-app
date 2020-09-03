@@ -1,5 +1,6 @@
 import React from 'react'
 import landingPicture from '../img/home_page/landing_page.png';
+import vectorArt from '../img/vector_art.png';
 
 const Hero = ({page, title}) => {
   const style = {
@@ -11,17 +12,13 @@ const Hero = ({page, title}) => {
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-
-    backgroundImage: `url(${landingPicture})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed'
+    
+    backgroundColor: '#e9e4b1'
   }
 
   return(
     <div style={ style }>
-      <h1>{title}</h1>
+      <img src={vectorArt}/>
     </div>
   )
 }

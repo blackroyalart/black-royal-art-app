@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Layout from "../layout/index"
+import Layout from "../layout/site-layout"
+
 // import ShopNav from "../component/shopNav"
 import { Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
@@ -20,6 +21,12 @@ const Shop = ({ data: { products,
                         masks,
                         customs } }) => {
 
+
+  // const filterProductByAppliedFilter = ({data, filter:{}}) => {
+  //   return data if filter.length === 0
+  //   if filter === 'paintings'
+
+  // }
   const [productData, setProductData] = useState(products);
 
   return(
@@ -107,6 +114,8 @@ query {
       node {
         id
         name
+        productType
+        paintingType
         price
         image {
           url

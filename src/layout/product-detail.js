@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import { graphql } from "gatsby"
-import Layout from "../layout"
+import Layout from "./site-layout"
 import Img from 'gatsby-image'
 import '../style/MerchInfo.scss'
 import { Row, Col } from 'reactstrap'
 import Rating from '../component/rating'
 import '../style/product-details.scss'
 
-// span.Product__buy {
-//   background-color: #ffb036;
-//   padding: 0.5em;
-//   border-radius: 0.25em;
-// }
 
 export default function ProductDetail({ data: {product, reviews} }) {
   
@@ -49,7 +44,6 @@ export default function ProductDetail({ data: {product, reviews} }) {
             data-item-image={product.image.url}
             data-item-name={product.name}
             data-item-quantity={prodQty}
-            data-item-min-quantity={1}
             data-item-url={`/`}
           >
             <span className="Product__buy">Add to cart</span>
@@ -61,7 +55,6 @@ export default function ProductDetail({ data: {product, reviews} }) {
         <h1>Reviews</h1>
         {reviews.edges.length > 0 ? (
           <>
-            {/* <h1>Reviews</h1> */}
             {reviews.edges.map(({node: review}) => {
               return(<div>
                 {review.name}

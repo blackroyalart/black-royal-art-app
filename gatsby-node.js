@@ -15,7 +15,7 @@ exports.createPages = async function ({ actions, graphql }) {
     const {name, id} = edge.node
     actions.createPage({
       path: name,
-      component: require.resolve(`./src/layouts/product-detail.js`),
+      component: require.resolve(`./src/layout/product-detail.js`),
       context: { 
         slug: name,
         id: id
@@ -23,17 +23,3 @@ exports.createPages = async function ({ actions, graphql }) {
     })
   })
 }
-
-// edges {
-//   node {
-//     id
-//     name
-//     price
-//     image {
-//       url
-//       sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-//         ...GatsbyDatoCmsSizes
-//       }
-//     }
-//   }
-// }

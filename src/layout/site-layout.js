@@ -2,20 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from '../component/header'
+import Footer from '../component/footer'
+
 import '../style/index.scss'
-import '../style/home.scss'
 
 const Layout = ({ children, site }) => (
   <div className="page-container">
-    <Helmet title="Black Royal Art" />
-    <div className="Container">
-      <div className="Landing">
-
-      </div>
-      {children}
-    
-    </div>
+    <Header/>
+    {children}
+    <Footer/>
   </div>
 )
 
