@@ -1,42 +1,18 @@
 # Black Royal App
 
-
-## Deploy on DatoCMS
-
-If you want to set up a live demo for yourself, just [sign up for a free DatoCMS account](https://dashboard.datocms.com/signup) and click this button:
-
-[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/deploy?repo=datocms/snipcart-gatsby-demo)
+## Structure
+Every page is represented by a component in the `pages` folder. Each page and component may or may not have its own `scss` file, which is found in the `style` folder. Generic components, such as the footer or header, are stored in the `component` folder. The `layout` folder contains the basic template for a page (i.e. a page will use a layout that contains a `header` component and a `footer` component).
 
 ## Usage
 
+### prereq
 1. Run `yarn install`
 1. Run `yarn global add gatsby-cli`
-1. Run `gatsby develop`
+1. Ask someone for the `DATO_API_TOKEN`. Create a `.env` file and run `echo 'DATO_API_TOKEN=abc123' >> .env` 
+
+### to run locally
+1. Run `gatsby develop` or `yarn develop`
 1. Application should be running locally at `http://localhost:8000/`
-```
-yarn install
-```
 
-Add an `.env` file containing the read-only API token of your DatoCMS site (set up with the demo button above):
-
-```
-echo 'DATO_API_TOKEN=abc123' >> .env
-```
-
-Then, to run this website in development mode (with live-reload):
-
-```
-yarn develop
-```
-
-To build the final, production ready static website:
-
-```
-yarn build
-```
-
-The final result will be saved in the `public` directory.
-
-## Further demo options
-
-This project is also available as a demo on [Gatsby Cloud](https://www.gatsbyjs.com/). This will allow you to test the [Gatsby preview](https://www.datocms.com/blog/live-preview-changes-on-gatsby-preview) capabilities in no time.
+### to deploy
+1. Run `yarn build` or push your changes to master
