@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import Layout from "../layout/site-layout"
 
-// import ShopNav from "../component/shopNav"
-import { Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap'
 import Img from 'gatsby-image'
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../style/theme.scss"
 import "../style/shop.scss"
-import { useStaticQuery, graphql } from "gatsby"
+
+import { graphql } from "gatsby"
 import filterProducts from '../helper'
-import { HelmetDatoCms } from 'gatsby-source-datocms'
+import ShopNav from '../component/shop-nav'
 
 const Shop = ({ data: { products }}) => {
 
@@ -20,51 +20,9 @@ const Shop = ({ data: { products }}) => {
   return(
     <Layout>
       <Container className="themed-container" fluid="sm">
-        
         <Row>
           <Col xs="3">
-            <div className="shopNav">
-              <Nav vertical>
-                <NavItem>
-                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {}))}>
-                    All
-                  </NavLink>
-                </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true}))}>
-                    Paintings
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem
-                      onClick={() => setProductData(
-                          filterProducts(
-                            unfilteredProductData, 
-                            {
-                              paintings: true,
-                              paintingType: 'canvas'
-                            }
-                          )
-                        )
-                      }
-                    >
-                      Canvas
-                    </DropdownItem>
-                    <DropdownItem onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true, paintingType: 'print'}))}>
-                      Prints
-                    </DropdownItem>
-                    <DropdownItem onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true, paintingType: 'product'}))}>
-                      Products
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
-                <NavItem>
-                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {mask: true}))}>Masks</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {custom: true}))}>Custom</NavLink>
-                </NavItem>
-              </Nav>
-            </div>
+            <ShopNav products={unfilteredProductData} setProductData={setProductData}/>
           </Col>
           <Col xs="9">
             <div className="Catalogue">

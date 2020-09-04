@@ -1,12 +1,7 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import Layout from "../layout/site-layout"
 import Hero from "../component/hero"
-// import InstagramFeed from "../component/instagram-feed"
 
-import { Container, Row, Col } from 'reactstrap'
-
-// import Img from 'gatsby-image'
 import aboutMePicture from '../img/home_page/about_me.jpg';
 import '../style/theme.scss';
 

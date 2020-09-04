@@ -17,12 +17,22 @@ const Hero = ({page, title}) => {
 
   const landingStyle = {
     height: '100%',
-    marginTop: '5.5em'
+    marginTop: '5.5em',
+    zIndex: '1'
   }
 
   return(
     <div style={ style }>
+      <h1 className="top-right">
+        painting.<br/>
+        custom.<br/>
+        mask.
+      </h1>
       <img src={vectorArt} style={landingStyle} className="landingImage" alt="Black Royal Art landing page"/>
+      <h1 className="bottom-left">
+        painting.<br/>
+        custom.<br/>
+        mask.</h1>
     </div>
   )
 }
