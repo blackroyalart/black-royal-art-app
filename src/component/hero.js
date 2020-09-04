@@ -1,5 +1,4 @@
 import React from 'react'
-import landingPicture from '../img/home_page/landing_page.png';
 import vectorArt from '../img/vector_art.png';
 
 const Hero = ({page, title}) => {
@@ -10,15 +9,20 @@ const Hero = ({page, title}) => {
     display: 'flex',
 
     justifyContent: 'center',
-    alignItems: 'center',
     textAlign: 'center',
     
-    backgroundColor: '#e9e4b1'
+    backgroundColor: '#e9e4b1',
+    overflow: 'hidden',
+  }
+
+  const landingStyle = {
+    height: '100%',
+    marginTop: '5.5em'
   }
 
   return(
     <div style={ style }>
-      <img src={vectorArt}/>
+      <img src={vectorArt} style={landingStyle} className="landingImage" alt="Black Royal Art landing page"/>
     </div>
   )
 }

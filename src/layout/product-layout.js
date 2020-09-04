@@ -5,10 +5,10 @@ import Img from 'gatsby-image'
 import '../style/MerchInfo.scss'
 import { Row, Col } from 'reactstrap'
 import Rating from '../component/rating'
-import '../style/product-details.scss'
+import '../style/ProductLayout.scss.scss'
 
 
-export default function ProductDetail({ data: {product, reviews} }) {
+export default function ProductLayout({ data: {product, reviews} }) {
   
   const [prodQty, setProdQty] = useState(1);
   return (

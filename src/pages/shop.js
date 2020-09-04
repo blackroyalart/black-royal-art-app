@@ -9,25 +9,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../style/theme.scss"
 import "../style/shop.scss"
 import { useStaticQuery, graphql } from "gatsby"
-
-
+import filterProducts from '../helper'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
-const Shop = ({ data: { products,
-                        paintings,
-                        paintingCanvas,
-                        paintingPrint,
-                        paintingProduct,
-                        masks,
-                        customs } }) => {
+const Shop = ({ data: { products }}) => {
 
-
-  // const filterProductByAppliedFilter = ({data, filter:{}}) => {
-  //   return data if filter.length === 0
-  //   if filter === 'paintings'
-
-  // }
-  const [productData, setProductData] = useState(products);
+  const unfilteredProductData = products.edges
+  const [productData, setProductData] = useState(filterProducts(unfilteredProductData));
 
   return(
     <Layout>
@@ -38,31 +26,42 @@ const Shop = ({ data: { products,
             <div className="shopNav">
               <Nav vertical>
                 <NavItem>
-                  <NavLink onClick={() => setProductData(products)}>
+                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {}))}>
                     All
                   </NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret onClick={() => setProductData(paintings)}>
+                  <DropdownToggle nav caret onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true}))}>
                     Paintings
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem onClick={() => setProductData(paintingCanvas)}>
+                    <DropdownItem
+                      onClick={() => setProductData(
+                          filterProducts(
+                            unfilteredProductData, 
+                            {
+                              paintings: true,
+                              paintingType: 'canvas'
+                            }
+                          )
+                        )
+                      }
+                    >
                       Canvas
                     </DropdownItem>
-                    <DropdownItem onClick={() => setProductData(paintingPrint)}>
+                    <DropdownItem onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true, paintingType: 'print'}))}>
                       Prints
                     </DropdownItem>
-                    <DropdownItem onClick={() => setProductData(paintingProduct)}>
+                    <DropdownItem onClick={() => setProductData(filterProducts(unfilteredProductData, {paintings: true, paintingType: 'product'}))}>
                       Products
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <NavItem>
-                  <NavLink onClick={() => setProductData(masks)}>Masks</NavLink>
+                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {mask: true}))}>Masks</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink onClick={() => setProductData(customs)}>Custom</NavLink>
+                  <NavLink onClick={() => setProductData(filterProducts(unfilteredProductData, {custom: true}))}>Custom</NavLink>
                 </NavItem>
               </Nav>
             </div>
@@ -70,16 +69,16 @@ const Shop = ({ data: { products,
           <Col xs="9">
             <div className="Catalogue">
               {
-                productData.edges.map(({ node: product }) => (
+                productData.map(({ node: product }) => (
                   <div className="Catalogue__item" key={product.id}>
                     <a className="Product__image" href={`/${product.name}`}>
                       <Img sizes={product.image.sizes} />
                       <div className="Product__details">
                         <div className="Product__name">
                           {product.name}
-                          <div className="Product__price">
-                            {product.price}€
-                          </div>
+                        </div>
+                        <div className="Product__price">
+                          ${product.price}
                         </div>
                       </div>
                     </a>
@@ -116,101 +115,6 @@ query {
         name
         productType
         paintingType
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-  paintings: allDatoCmsProduct(filter: {productType: {eq: "painting"}}) {
-    edges {
-      node {
-        id
-        name
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-
-  paintingCanvas: allDatoCmsProduct(filter: {productType: {eq: "painting"}, paintingType: {eq: "canvas"}}) {
-    edges {
-      node {
-        id
-        name
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-
-  paintingPrint: allDatoCmsProduct(filter: {productType: {eq: "painting"}, paintingType: {eq: "print"}}) {
-    edges {
-      node {
-        id
-        name
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-
-  paintingProduct: allDatoCmsProduct(filter: {productType: {eq: "painting"}, paintingType: {eq: "product"}}) {
-    edges {
-      node {
-        id
-        name
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-
-  masks: allDatoCmsProduct(filter: {productType: {eq: "mask"}}) {
-    edges {
-      node {
-        id
-        name
-        price
-        image {
-          url
-          sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {
-            ...GatsbyDatoCmsSizes
-          }
-        }
-      }
-    }
-  }
-
-  customs: allDatoCmsProduct(filter: {productType: {eq: "custom"}}) {
-    edges {
-      node {
-        id
-        name
         price
         image {
           url

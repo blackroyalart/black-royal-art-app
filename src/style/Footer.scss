@@ -4,13 +4,19 @@
   margin: auto;
   width: 100%;
   min-height: 200px;
-  font-style: italic;
-  padding: 20px 30px;
+  font-weight: bold;
+  padding: 70px 30px;
   background: #595959;
-
+  
   a {
-    font-weight: bold;
-    text-decoration: underline;
-    color: blue;
+    text-decoration: none;
+    color: #969696;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    text-transform: lowercase;
+    font-size: 2rem;
   }
 }

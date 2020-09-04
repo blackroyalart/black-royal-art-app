@@ -1,7 +1,11 @@
 # Black Royal App
 
 ## Structure
-Every page is represented by a component in the `pages` folder. Each page and component may or may not have its own `scss` file, which is found in the `style` folder. Generic components, such as the footer or header, are stored in the `component` folder. The `layout` folder contains the basic template for a page (i.e. a page will use a layout that contains a `header` component and a `footer` component).
+Every page is represented by a component in the `pages` folder. Each page and component may or may not have its own `scss` file, which is found in the `style` folder.
+
+Generic components, such as the footer or header, are stored in the `component` folder.
+
+The `layout` folder contains the basic template for a page (i.e. a page will use a layout that contains a `header` component and a `footer` component).
 
 ## Usage
 

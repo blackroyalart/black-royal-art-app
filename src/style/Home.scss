@@ -1,0 +1,50 @@
+.about-me {
+  height: 75vh;
+  align-items: center;
+  padding: 5em 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section {
+  height: 75vh;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+}
+
+.section-image {
+  z-index:-1;
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 75vh;
+
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-color: #000;
+  background-position: 54%;
+}
+
+.right {
+  margin-left: 50%;
+  text-align: right;
+}
+
+.section-text {
+  text-align:right;
+  width: 50%;
+  margin-left: 50%;
+  padding: 0 5%;
+
+  p {
+    text-align:right;
+    
+  }
+}
+
+.left {
+  text-align:left;
+  margin-left: 0;
+
+  p {text-align: justify;}
+}

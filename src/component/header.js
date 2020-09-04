@@ -6,11 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from 'reactstrap';
 import '../style/Header.scss'
 import { Cart4 as CartIcon } from 'react-bootstrap-icons';
@@ -21,19 +17,15 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="header themed-container container-sm" color="transparent" expand="md" fixed="top" >
+    <Navbar className="header themed-container" color="transparent" expand="md" fixed="top" >
       <NavbarBrand href="/" navbar>Black Royal Art</NavbarBrand>
+      <NavLink href="/art">My Art</NavLink>
+      <NavLink href="/about">About Me</NavLink>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
-            <NavLink href="/art">My Art</NavLink>
-          </NavItem>
-          <NavItem>
             <NavLink href="/shop">Shop</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/about">About Me</NavLink>
           </NavItem>
         </Nav>
         <div className="shopping-cart">

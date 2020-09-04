@@ -7,42 +7,21 @@
 
 body {
   background-color: black!important;
-  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+.content {
+  min-height: 100vh;
 }
 
 p, a, a:hover {
+  font-size: 1.25rem;
   color: #969696;
 }
+
 .page-containr {
-  margin-top: 4em;
+  margin-top: 3.5em;
   margin: 16vh 0;
-}
-img {
-  height: 100%;
-  margin-top: 10.7em;
-}
-
-.about-me {
-  height: 75vh;
-  align-items: center;
-  padding: 5em 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.section {
-  height: 75vh;
-  overflow: hidden;
-}
-.landing-image {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 75vh;
-  background-image: url("../img/home_page/about_me.jpg");
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-color: #000;
-  background-position: 54%;
 }
 
 h1 {
@@ -54,3 +33,4 @@ h1 {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255,176,55, 0.75) 50%);
   }
 }
+

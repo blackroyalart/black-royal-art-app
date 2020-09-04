@@ -1,17 +1,7 @@
 .Catalogue {
   margin-top: 2em;
 }
-.Catalogue__item {
-  margin-bottom: 60px;
-}
-
 @media screen and (min-width: 600px) {
-  // .Catalogue {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   flex-wrap: wrap;
-  // }
-
   .Catalogue__item {
     width: 45%;
   }
