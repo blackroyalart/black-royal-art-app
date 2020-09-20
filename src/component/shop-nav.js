@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import filterProducts from '../helper'
+import filterProducts from '../api/helper'
 
 const ShopNav = (props) => {
   const { products, setProductData } = props

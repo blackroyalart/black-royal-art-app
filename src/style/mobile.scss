@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+  .section {
+    display: block;
+    height: auto;
+  }
+
+  .section-text {
+    width: 100%;
+    margin-left: 0;
+    padding: 5% 10%;
+    text-align: left;
+    p {
+      text-align: left;
+    }
+  }
+
+  .section-image {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+  }
+}

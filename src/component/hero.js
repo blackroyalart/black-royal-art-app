@@ -4,7 +4,7 @@ import vectorArt from '../img/vector_art.png';
 const Hero = ({page, title}) => {
   const style = {
     width: "100vw",
-    height: "90vh",
+    height: "60%",
 
     display: 'flex',
 
@@ -23,16 +23,16 @@ const Hero = ({page, title}) => {
 
   return(
     <div style={ style }>
-      <h1 className="top-right">
+      {/* <h1 className="top-right">
         painting.<br/>
         custom.<br/>
         mask.
-      </h1>
+      </h1> */}
       <img src={vectorArt} style={landingStyle} className="landingImage" alt="Black Royal Art landing page"/>
-      <h1 className="bottom-left">
+      {/* <h1 className="bottom-left">
         painting.<br/>
         custom.<br/>
-        mask.</h1>
+        mask.</h1> */}
     </div>
   )
 }

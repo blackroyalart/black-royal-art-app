@@ -3,7 +3,9 @@ import Layout from "../layout/site-layout"
 import Hero from "../component/hero"
 
 import aboutMePicture from '../img/home_page/about_me.jpg';
-import '../style/theme.scss';
+// import '../style/theme.scss';
+
+import InstagramFeed from '../component/instagram-feed';
 
 export default function Index() {
   return(
@@ -51,7 +53,9 @@ export default function Index() {
 
           <div className="section-image right" style={{ backgroundImage: `url('https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/57488378_1294037424095351_8604289678034662113_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=111&_nc_ohc=T7snD2dqce0AX-Mm9hy&_nc_tp=18&oh=a90cd4ed5c631a82421a734f29c47b07&oe=5F7C61AC')`}}/>
         </div>
-        {/* <InstagramFeed/> */}
+        <div className="section section-instagram">
+          <InstagramFeed/>
+        </div>
       </Layout>
     </>
   )

@@ -1,10 +1,26 @@
 .shopNav {
   position: fixed;
   margin-top: 3em;
+  a {
+    color: #000000;
+  }
+}
+
+li.nav-item:hover {
+  cursor: pointer;
 }
 
 .dropdown-menu {
   position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+
+  :focus, :hover {
+    background-color: transparent;
+  }
 }
 
 .cart-button {
@@ -14,4 +30,8 @@
 .Product__details {
   display: flex;
   justify-content: space-between;
+}
+
+.gatsby-image-wrapper {
+  border: .5em ridge #595959;
 }

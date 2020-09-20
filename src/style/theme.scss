@@ -6,11 +6,11 @@
 }
 
 body {
-  background-color: black!important;
+  background-color: #e9e4b1;
   min-height: 100vh;
 }
-
 .content {
+  margin-top: 4em;
   min-height: 100vh;
 }
 
@@ -23,14 +23,27 @@ p, a, a:hover {
   margin-top: 3.5em;
   margin: 16vh 0;
 }
+.section {
+  h1 {
+    font-weight: 400;
+    color: #e9e3b0;
+    .highlight {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255,176,55, 0.75) 50%);
+    }
+  }
+}
 
 h1 {
-  font-weight: 400;
-  color: #e9e3b0;
+  padding: 5% 0;
+  font-weight: 1000;
+  font-style: italic;
+  color: #000000;
   .highlight {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    display: inline;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255,176,55, 0.75) 50%);
   }
 }
+
 

@@ -52,13 +52,13 @@ export default function ProductLayout({ data: {product, reviews} }) {
       </Row>
 
       <div>
-        <h1>Reviews</h1>
+        <h1><i>Reviews & Ratings</i></h1>
         {reviews.edges.length > 0 ? (
           <>
             {reviews.edges.map(({node: review}) => {
               return(<div>
                 {review.name}
-                {review.rating}
+                <Rating value={review.rating}/>
                 {review.content}
                 {review.createdAt}
               </div>)

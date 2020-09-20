@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Header from '../component/header'
 import Footer from '../component/footer'
-
+import '../style/mobile.scss'
 import '../style/index.scss'
 
 const Layout = ({ children, site }) => (

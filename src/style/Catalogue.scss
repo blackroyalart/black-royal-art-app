@@ -1,6 +1,15 @@
 .Catalogue {
   margin-top: 2em;
+  p, a, a:hover {
+    font-size: 1.25rem;
+    color: #000000;
+  }
 }
+
+.Catalogue__item {
+  margin-bottom: 5%;
+}
+
 @media screen and (min-width: 600px) {
   .Catalogue__item {
     width: 45%;
@@ -15,6 +24,8 @@
   }
 
   .Catalogue__item {
+    margin-left: 5%;
+    display: inline-block;
     width: 28%;
   }
 }

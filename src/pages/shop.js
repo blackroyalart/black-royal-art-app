@@ -9,8 +9,9 @@ import "../style/theme.scss"
 import "../style/shop.scss"
 
 import { graphql } from "gatsby"
-import filterProducts from '../helper'
+import filterProducts from '../api/helper'
 import ShopNav from '../component/shop-nav'
+import Rating from '../component/rating'
 
 const Shop = ({ data: { products }}) => {
 
@@ -25,6 +26,7 @@ const Shop = ({ data: { products }}) => {
             <ShopNav products={unfilteredProductData} setProductData={setProductData}/>
           </Col>
           <Col xs="9">
+            <h1>S<div className="highlight">hop</div></h1>
             <div className="Catalogue">
               {
                 productData.map(({ node: product }) => (
@@ -40,16 +42,7 @@ const Shop = ({ data: { products }}) => {
                         </div>
                       </div>
                     </a>
-                    <div
-                      className="Product snipcart-add-item"
-                      data-item-id={product.id}
-                      data-item-price={product.price}
-                      data-item-image={product.image.url}
-                      data-item-name={product.name}
-                      data-item-url={`/`}
-                    >
-                      <span className="Product__buy">Buy now</span>
-                    </div>
+                    <Rating value={product.rating}/>
                   </div>
                 ))
               }
@@ -74,6 +67,7 @@ query {
         productType
         paintingType
         price
+        rating
         image {
           url
           sizes(maxWidth: 300, imgixParams: { fm: "jpg" }) {

@@ -1,3 +1,10 @@
+.landingImage {
+  position: relative;
+  height: 100%;
+  margin-bottom: -15%;
+  z-index: 1;
+}
+
 .about-me {
   height: 75vh;
   align-items: center;
@@ -10,10 +17,11 @@
   overflow: hidden;
   align-items: center;
   display: flex;
+  background-color: #000;
 }
 
 .section-image {
-  z-index:-1;
+  z-index:1;
   content: '';
   position: absolute;
   width: 50%;
@@ -42,6 +50,11 @@
   }
 }
 
+.section-instagram {
+  display: block;
+  justify-content: center;
+}
+
 .left {
   text-align:left;
   margin-left: 0;
@@ -51,7 +64,7 @@
 
 .top-right, .bottom-left {
   font-family: 'Playfair Display', serif;
-  font-size: 150px;
+  font-size: 1000%;
   font-style: italic;
   font-weight: 1000;
   color: #bab68d;

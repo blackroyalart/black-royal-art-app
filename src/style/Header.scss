@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display&display=swap');
 
 nav {
+  background-color: #e9e4b1;
+
   a {
     font-size: 1.25rem;
     font-family: 'Playfair Display', serif;
@@ -13,10 +15,17 @@ nav {
   }
 }
 
-a.nav-brand {
-  font-size: 1.75rem;
+.navbar .navbar-header .navbar-brand {
+  display: block;
+  text-align: center;
+  float: none;
+  vertical-align: top;
 }
 
+.navbar-brand {
+  font-size: xx-large;
+  font-weight: 900;
+}
 // .Header {
 //   background: #fff;
 //   color: #000;

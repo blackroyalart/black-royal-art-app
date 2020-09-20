@@ -21,10 +21,12 @@ const Footer = () => (
         <p><a href="/#!/cart">Cart</a></p>
       </Col>
       <Col xs="3">
-        <h2>Social</h2>
-        <p>Instagram</p>
-        <p>Twitter</p>
-        <p>Social Media #3</p>
+        <p>
+          Follow us on Instagram @blackroyalart
+        </p>
+        <p>
+          Site design and graphics done by the Levare Team.
+        </p>
       </Col>
     </Row>
   </div>

@@ -17,23 +17,33 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="header themed-container" color="transparent" expand="md" fixed="top" >
-      <NavbarBrand href="/" navbar>Black Royal Art</NavbarBrand>
-      <NavLink href="/art">My Art</NavLink>
-      <NavLink href="/about">About Me</NavLink>
-      <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="/shop">Shop</NavLink>
-          </NavItem>
-        </Nav>
-        <div className="shopping-cart">
-          <div className="Header__summary snipcart-summary snipcart-checkout">      
-            <CartIcon className="cart-button" width={20} height={40}/>
+    <Navbar className="header themed-container justify-content-between" expand="md" fixed="top" >
+      <div className="container-fluid">
+        <NavbarToggler onClick={toggle} />
+        
+        <Collapse isOpen={isOpen} navbar className="dual-nav w-50 order-1 order-md-0">
+          <NavLink href="/art">My Art</NavLink>
+          <NavLink href="/about">About Me</NavLink>
+          <NavLink href="/shop">Shop</NavLink>
+        </Collapse>
+
+        <NavbarBrand href="/" navbar className="mx-auto d-block text-center order-0 order-md-1 w-25">
+          Black Royal Art
+        </NavbarBrand>
+
+        <Collapse isOpen={isOpen} navbar className="navbar-collapse collapse dual-nav w-50 order-2">
+          {/* <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/shop">Shop</NavLink>
+            </NavItem>
+          </Nav> */}
+          <div className="shopping-cart ml-auto">
+            <div className="Header__summary snipcart-summary snipcart-checkout">      
+              <CartIcon className="cart-button" width={20} height={40}/>
+            </div>
           </div>
-        </div>
-      </Collapse>
+        </Collapse>
+      </div>
     </Navbar>
   );
 }
