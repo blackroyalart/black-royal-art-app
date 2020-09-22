@@ -1,3 +1,21 @@
 .product-row {
   align-items: center;
 }
+
+.product-header, .product-actions, .product-add-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  font-size: 19px;
+}
+
+p.product-rating {
+  text-align: right;
+}

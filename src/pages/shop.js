@@ -52,7 +52,6 @@ const Shop = ({ data: { products }}) => {
       </Container>
     </Layout>
   )
-  
 }
 
 export default Shop

@@ -2,13 +2,14 @@ import React from 'react'
 import Layout from "../layout/site-layout"
 import { Container, Row, Col } from 'reactstrap'
 import '../style/About.scss'
+import aboutMePicture from '../img/about_vector_art.png';
 
 const About = () => (
   <Layout>
     <Container className="themed-container" fluid="sm">
         <Row>
           <Col xs="6">
-            <img src="https://i.gyazo.com/7e30aa97ff545883ffd73f98b3079321.png"/>
+            <img src={aboutMePicture}/>
           </Col>
           <Col xs="6">
             <h1>A<div className="highlight">bout</div></h1>
