@@ -3,8 +3,6 @@ import vectorArt from '../img/vector_art.png';
 
 const Hero = ({page, title}) => {
   const style = {
-    width: "100vw",
-    height: "60%",
 
     display: 'flex',
 
@@ -16,8 +14,7 @@ const Hero = ({page, title}) => {
   }
 
   const landingStyle = {
-    height: '100%',
-    marginTop: '5.5em',
+    width: '50%',
     zIndex: '1'
   }
 

@@ -63,7 +63,7 @@ export default function ProductLayout({ data: {product, reviews} }) {
         </Col>
       </Row>
 
-      <div>
+      <div className="shop-item-review-rating">
         <h1><i>Reviews & Ratings</i></h1>
         {reviews.edges.length > 0 ? (
           <>

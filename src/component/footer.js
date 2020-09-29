@@ -16,9 +16,17 @@ const Footer = () => (
       </Col>
       <Col xs="3">
         <h2>Shop</h2>
-        <p><a href="/art">Art</a></p>
-        <p><a href="/shop">Shop</a></p>
-        <p><a href="/#!/cart">Cart</a></p>
+        <div className="footer-links">
+          <p className="footer-link">
+            <a href="/art">Art</a>
+          </p>
+          <p className="footer-link">
+            <a href="/shop">Shop</a>
+          </p>
+          <p className="footer-link">
+            <a href="/#!/cart" className="footer-link">Cart</a>
+          </p>
+        </div>
       </Col>
       <Col xs="3">
         <p>

@@ -9,7 +9,7 @@ const About = () => (
     <Container className="themed-container" fluid="sm">
         <Row>
           <Col xs="6">
-            <img src={aboutMePicture}/>
+            <img src={aboutMePicture} className="about-me"/>
           </Col>
           <Col xs="6">
             <h1>A<div className="highlight">bout</div></h1>
