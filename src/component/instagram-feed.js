@@ -1,38 +1,8 @@
 import React from 'react'
+import { Row, Col } from 'reactstrap';
 import '../style/InstagramFeed.scss';
 
-
-
 class InstagramFeed extends React.Component {
-  // constructor() {
-  //   super()
-  //   // this.props.items = [
-  //   //   'https://i.pinimg.com/originals/29/6a/db/296adb093bbfaa000ff907375200de2b.jpg',
-  //   //   'https://images.pexels.com/photos/719396/pexels-photo-719396.jpeg',
-  //   //   'https://wonderfulengineering.com/wp-content/uploads/2016/01/bright-phone-wallpaper-1.jpg',
-  //   //   'https://wallpaperaccess.com/full/270159.jpg'
-  //   // ]
-  // }
-
-  // // componentDidMount () {
-  // //   this.fetchFeed()
-  // // }
-
-  // const API_BASE_URL = 'https://api.instagram.com/'
-
-  // async fetchFeed () {
-  //   let response = await fetch(
-  //     `https://api.instagram.com/v1/users/${this.user_id}/media/recent/?access_token='${this.access_token}'`
-  //   )
-  //   let posts = await response.json()
-  //   let comments = await this.makeCommentsList(posts.data)
-
-  //   this.setState({
-  //       data: posts.data,
-  //       comments: comments,
-  //       loaded: true
-  //   })
-  // }
 
   render() {
     // const { items } = this.props
@@ -41,20 +11,28 @@ class InstagramFeed extends React.Component {
         <h1>
           Check out my <span className="highlight">art</span>
         </h1>
-        {/* <div className="carousel">
-          {items.map((item, index) => {
-            return(
-              <div className="carousel-item" data-item={index}>
-                <img src={item}/>
-              </div>
-            )  
-          })}
-        </div> */}
-        <div className="carousel">
-          <div className="carousel-item">
-            hello
-          </div>
-        </div>
+        <Row>
+          <Col xs="3">
+            <a href="https://www.instagram.com/p/B-aFT19JRbn/">
+              <img src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/91751217_575392699850623_773188962703452609_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=PhK83DRER20AX8yLKNo&tp=16&oh=57c419d8ec4f0d75c264d27579b85b0e&oe=5FA6E31E"/>
+            </a>
+          </Col>
+          <Col xs="3">
+            <a href="https://www.instagram.com/p/B-aFT19JRbn/">
+              <img src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/91751217_575392699850623_773188962703452609_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=PhK83DRER20AX8yLKNo&tp=16&oh=57c419d8ec4f0d75c264d27579b85b0e&oe=5FA6E31E"/>
+            </a>
+          </Col>
+          <Col xs="3">
+            <a href="https://www.instagram.com/p/B-aFT19JRbn/">
+              <img src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/91751217_575392699850623_773188962703452609_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=PhK83DRER20AX8yLKNo&tp=16&oh=57c419d8ec4f0d75c264d27579b85b0e&oe=5FA6E31E"/>
+            </a>
+          </Col>
+          <Col xs="3">
+            <a href="https://www.instagram.com/p/B-aFT19JRbn/">
+              <img src="https://scontent-lga3-2.cdninstagram.com/v/t51.2885-15/e35/c0.180.1440.1440a/s480x480/91751217_575392699850623_773188962703452609_n.jpg?_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_cat=107&_nc_ohc=PhK83DRER20AX8yLKNo&tp=16&oh=57c419d8ec4f0d75c264d27579b85b0e&oe=5FA6E31E"/>
+            </a>
+          </Col>
+        </Row>
       </>
     )
   }

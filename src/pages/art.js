@@ -16,6 +16,26 @@ const Art = ({ data: { arts }}) => {
             </Col>
           ))
         }
+        <Col xs="3">
+          <h1>my art</h1>
+          
+        </Col>
+        <Col xs="3">
+          <h1>my art</h1>
+          
+        </Col>
+        <Col xs="3">
+          <h1>my art</h1>
+          
+        </Col>
+        <Col xs="3">
+          <h1>my art</h1>
+          
+        </Col>
+        <Col xs="3">
+          <h1>my art</h1>
+          
+        </Col>
       </Row>
     </Layout>
   )
