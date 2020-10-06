@@ -17,7 +17,7 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className="header themed-container justify-content-between" expand="md" fixed="top" >
+    <Navbar className="header themed-container justify-content-between navbar-light" expand="md" fixed="top" >
       <div className="container-fluid">
         <NavbarToggler onClick={toggle} />
         

@@ -26,76 +26,7 @@ nav {
   font-size: xx-large;
   font-weight: 900;
 }
-// .Header {
-//   background: #fff;
-//   color: #000;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   z-index: 1;
-// }
 
-// .Header__body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-  
-//   a {
-//     text-decoration: none;
-//     color: black;
-//     margin-left: 21px;
-//   }
-// }
-
-// .Header__title {
-//   flex: 1;
-//   padding: 20px 0;
-//   font-family: "times new roman", times, serif;
-
-//   a {
-//     font-size: 2em;
-//     font-weight: bold;
-//     position: relative;
-//     color: #000;
-//     text-decoration: none;
-//     display: block;
-//     padding: 2px;
-//     margin: 0;
-//   }
-// }
-
-// .Header__summary {
-//   display: flex;
-//   text-decoration: none;
-//   color: #000;
-//   text-align: center;
-//   cursor: pointer;
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// }
-
-// .Header__summary__line {
-//   font-size: 0.8em;
-// }
-
-// @keyframes noise-anim {
-//   $steps: 20;
-
-//   @for $i from 0 through $steps {
-//     #{percentage($i * (1 / $steps))} {
-//       clip:rect(random(100) + px, 9999px, random(100) + px, 0);
-//     }
-//   }
-// }
-
-// @keyframes noise-anim-2 {
-//   $steps: 20;
-
-//   @for $i from 0 through $steps{
-//     #{percentage($i * (1/$steps))}{
-//       clip:rect(random(100) + px, 9999px, random(100) + px, 0);
-//     }
-//   }
-// }
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}
