@@ -3,8 +3,6 @@ import Layout from "../layout/site-layout"
 import Hero from "../component/hero"
 
 import aboutMePicture from '../img/home_page/about_me.jpg';
-// import '../style/theme.scss';
-
 import InstagramFeed from '../component/instagram-feed';
 
 export default function Index() {

@@ -15,7 +15,8 @@ body {
 }
 
 p, a, a:hover {
-  color: #969696;
+  color: #000;
+  font-size: 1.5rem;
 }
 
 .page-containr {
@@ -25,11 +26,13 @@ p, a, a:hover {
 .section {
   h1 {
     font-weight: 400;
-    color: #e9e3b0;
+    color: #969696;;
     .highlight {
+      color: #FFB037;
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255,176,55, 0.75) 50%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #E9E3B0 50%);
+      
     }
   }
 }

@@ -3,7 +3,7 @@
 nav {
   background-color: #e9e4b1;
 
-  a {
+  a, a:hover {
     font-size: 1.25rem;
     font-family: 'Playfair Display', serif;
     color: black;
@@ -22,7 +22,7 @@ nav {
   vertical-align: top;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand:hover {
   font-size: xx-large;
   font-weight: 900;
 }

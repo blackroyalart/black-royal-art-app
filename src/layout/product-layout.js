@@ -71,8 +71,12 @@ export default function ProductLayout({ data: {product, reviews} }) {
               return(<div>
                 <h2>{review.name}</h2>
                 <Rating value={review.rating}/>
-                {review.content}
-                {review.createdAt}
+                <p className="product-content">
+                  {review.content}
+                </p>
+                <p className="product-rating">
+                  <Rating value={review.rating}/>
+                </p>
               </div>)
             })}
           </>
