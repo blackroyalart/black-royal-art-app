@@ -51,6 +51,13 @@
 .section-instagram {
   display: block;
   justify-content: center;
+  height: auto;
+  padding-bottom: 4em;
+}
+
+.section.section-instagram img:hover {
+  opacity: 1;
+  background-color: black;
 }
 
 .left {

@@ -39,7 +39,7 @@ const Header = (props) => {
           </Nav> */}
           <div className="shopping-cart ml-auto">
             <div className="Header__summary snipcart-summary snipcart-checkout">      
-              <CartIcon className="cart-button" width={20} height={40}/>
+              <CartIcon className="cart-button" width={35} height={35}/>
             </div>
           </div>
         </Collapse>

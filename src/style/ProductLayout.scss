@@ -9,11 +9,26 @@
 }
 
 .btn-primary {
-  color: black;
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: 0;
-  font-size: 19px;
+  border-radius: 50%;
+  background: #000;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  padding: 0;
+  border: 0.05rem solid #000;
+  color:white;
+  margin-right: 1rem;
+}
+
+.btn-primary:hover {
+  border: 0.05rem solid #fff;
+  background: #fff;
+  color: #000;
+}
+
+.product-qty {
+  margin-right: 1rem;
 }
 
 p.product-rating {
@@ -27,3 +42,8 @@ p.product-rating {
 .product-actions {
   font-size: 1.5rem
 }
+
+.product-layout {
+  width: 75%;
+}
+

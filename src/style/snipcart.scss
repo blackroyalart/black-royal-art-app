@@ -8,7 +8,12 @@
   }
 
   .snip-header {
-    background: #663399;
+    color: black;
+    background: #ffb037;
+    h2, span {
+      font-weight: 1000;
+      font-family: 'Roboto', sans-serif!important;
+    }
   }
 
   .snip-layout__main-container {
@@ -17,7 +22,10 @@
   }
 
   .snip-header__total {
+    color: white;
     border-radius: 0;
   }
+
+  
 }
 
