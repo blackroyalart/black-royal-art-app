@@ -1,3 +1,9 @@
+// .content {
+//   background-color:#fff;
+//   margin-top: 4em;
+//   padding-top: 4em;
+//   min-height: 100vh;
+// }
 .product-row {
   align-items: center;
 }
@@ -19,12 +25,12 @@
   border: 0.05rem solid #000;
   color:white;
   margin-right: 1rem;
-}
 
-.btn-primary:hover {
-  border: 0.05rem solid #fff;
-  background: #fff;
-  color: #000;
+  &:hover {
+    border: 0.05rem solid #fff;
+    background: #fff;
+    color: #000;    
+  }
 }
 
 .product-qty {
@@ -44,6 +50,19 @@ p.product-rating {
 }
 
 .product-layout {
+  padding-top: 1rem;
   width: 75%;
 }
 
+.snipcart-add-item {
+  border: none;
+  background: #000;
+  color: #ffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}

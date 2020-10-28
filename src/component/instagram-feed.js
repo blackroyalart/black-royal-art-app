@@ -6,7 +6,7 @@ class InstagramFeed extends React.Component {
 
   render() {
     return(
-      <>
+      <div className="instagram-feed">
         <h1>
           Check out my <span className="highlight">art</span>
         </h1>
@@ -52,7 +52,7 @@ class InstagramFeed extends React.Component {
             </div>
           </Col>
         </Row>
-      </>
+      </div>
     )
   }
 }

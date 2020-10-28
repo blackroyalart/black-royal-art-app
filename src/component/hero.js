@@ -3,7 +3,7 @@ import vectorArt from '../img/vector_art.png';
 
 const Hero = ({page, title}) => {
   const style = {
-
+    marginTop: '-4rem',
     display: 'flex',
 
     justifyContent: 'center',

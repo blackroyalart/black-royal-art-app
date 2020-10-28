@@ -8,11 +8,6 @@ const Footer = () => (
     <Row>
       <Col xs="6">
         <h2>Black Royal Art</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore et dolore magna 
-          aliqua. Sapien eget mi proin sed libero enim.
-        </p>
       </Col>
       <Col xs="3">
         <h2>Shop</h2>
