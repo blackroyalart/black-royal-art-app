@@ -3,40 +3,23 @@ import Layout from "../layout/site-layout"
 import { Container, Row, Col } from 'reactstrap';
 import Img from 'gatsby-image'
 import { graphql } from "gatsby"
+import '../style/Art.scss'
 
 const Art = ({ data: { arts }}) => {
   return(
     <Layout>
-      <h1>A<div className="highlight">rt</div></h1>
-      <Row>
-        {arts.edges.map(({node: art}) => (
-            <Col xs="3">
-              <h1>{art.title}</h1>
-              <Img sizes={art.mainImage.sizes} />
-            </Col>
-          ))
-        }
-        <Col xs="3">
-          <h1>my art</h1>
-          
-        </Col>
-        <Col xs="3">
-          <h1>my art</h1>
-          
-        </Col>
-        <Col xs="3">
-          <h1>my art</h1>
-          
-        </Col>
-        <Col xs="3">
-          <h1>my art</h1>
-          
-        </Col>
-        <Col xs="3">
-          <h1>my art</h1>
-          
-        </Col>
-      </Row>
+      <Container className="themed-container  art-section" fluid="sm">
+        <h1>A<div className="highlight">rt</div></h1>
+        <Row>
+          {arts.edges.map(({node: art}) => (
+              <Col xs="3">
+                <h1>{art.title}</h1>
+                <Img sizes={art.mainImage.sizes} />
+              </Col>
+            ))
+          }
+        </Row>
+      </Container>
     </Layout>
   )
 }

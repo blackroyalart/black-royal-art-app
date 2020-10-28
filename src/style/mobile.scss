@@ -21,6 +21,9 @@
   }
 
   /* navbar */
+  .navbar {
+    padding: 0;
+  }
   .navbar-collapse.collapse.dual-nav.w-50.order-2.collapse.show.navbar-collapse, .nav-link {
     text-align: center;
   }
@@ -50,9 +53,10 @@
   .shopNav {
     background-color: #e9e4b7;
     position: fixed;
-    z-index: 1; 
-    margin-top: -3em!important;
-    width: 100%
+    z-index: 1;
+    margin-left: -2rem;
+    margin-top: -2em!important;
+    width: 120%;
   }
 
   .flex-column {
@@ -77,5 +81,9 @@
 
   .product-layout {
     width: 100%!important;
+  }
+
+  .product-header, .product-actions, .product-add-items {
+    display: block!important;
   }
 }
