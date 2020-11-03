@@ -9,7 +9,9 @@ import '../style/ProductLayout.scss'
 
 
 export default function ProductLayout({ data: {product, reviews} }) {
-  
+  function formatProductId(product) {
+    return product.split('-')[1]
+  }
   const [prodQty, setProdQty] = useState(1);
   return (
     <Layout>
@@ -54,7 +56,7 @@ export default function ProductLayout({ data: {product, reviews} }) {
                 <button class="btn btn-primary" onClick={() => setProdQty(prodQty+1)}>+</button>
                 <button
                   className="Product snipcart-add-item"
-                  data-item-id={5834903}
+                  data-item-id={formatProductId(product.id)}
                   data-item-price={product.price}
                   data-item-image={product.image.url}
                   data-item-name={product.name}
