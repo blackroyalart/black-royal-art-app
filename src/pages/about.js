@@ -9,7 +9,7 @@ const About = () => (
     <Container className="themed-container" fluid="sm">
         <Row>
           <Col xs="6">
-            <h1><div className="highlight">About</div></h1>
+            <h1>A<div className="highlight">bout Me</div></h1>
             <p>
               Akwaaba! Hello Kings and Queens, my name is Eva Odoom. I am a Ghanaian Ameerican self-taught artist and am highly motivated by my culture and personal ties.
             </p>

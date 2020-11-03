@@ -26,6 +26,9 @@ export default function ProductLayout({ data: {product, reviews} }) {
               </div>
             </div>
             <p className="product-description">
+              <p>
+                {product.id}
+              </p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, velit ut 
               vehicula vehicula, enim ante sollicitudin arcu, vitae vestibulum felis turpis eget 
               eros. Nam pulvinar id metus nec pulvinar. Pellentesque nec mi eros. Suspendisse mollis 
@@ -51,12 +54,12 @@ export default function ProductLayout({ data: {product, reviews} }) {
                 <button class="btn btn-primary" onClick={() => setProdQty(prodQty+1)}>+</button>
                 <button
                   className="Product snipcart-add-item"
-                  data-item-id={product.id}
+                  data-item-id={product.name}
                   data-item-price={product.price}
                   data-item-image={product.image.url}
                   data-item-name={product.name}
                   data-item-quantity={prodQty}
-                  data-item-url={`/${product.name}`}
+                  data-item-url={`/`}
                 >
                   <span className="Product__buy">Add to cart</span>
                 </button>
