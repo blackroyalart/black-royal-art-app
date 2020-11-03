@@ -59,7 +59,7 @@ export default function ProductLayout({ data: {product, reviews} }) {
                   data-item-image={product.image.url}
                   data-item-name={product.name}
                   data-item-quantity={prodQty}
-                  data-item-url={`/`}
+                  data-item-url={`https://black-royal-art.netlify.app/${product.name}`}
                 >
                   <span className="Product__buy">Add to cart</span>
                 </button>
