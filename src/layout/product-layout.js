@@ -54,7 +54,7 @@ export default function ProductLayout({ data: {product, reviews} }) {
                 <button class="btn btn-primary" onClick={() => setProdQty(prodQty+1)}>+</button>
                 <button
                   className="Product snipcart-add-item"
-                  data-item-id={product.name}
+                  data-item-id={5834903}
                   data-item-price={product.price}
                   data-item-image={product.image.url}
                   data-item-name={product.name}
