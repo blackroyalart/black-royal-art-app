@@ -39,7 +39,9 @@ export default function ProductLayout({ data: {product, reviews} }) {
 
             <div className="product-actions">
               <div class="product-price">
-                ${product.price}
+                <strong>
+                  ${product.price}
+                </strong>
               </div>
               <div className="product-add-items">   
                 <button class="btn btn-primary" onClick={() => setProdQty(prodQty-1)}>-</button>
@@ -65,7 +67,7 @@ export default function ProductLayout({ data: {product, reviews} }) {
         </Row>
 
         <div className="shop-item-review-rating">
-          <h1><i>Reviews & Ratings</i></h1>
+          <h1 className="product-reviews-ratings"><i>Re<span class="highlight">views & Ratings</span></i></h1>
           {reviews.edges.length > 0 ? (
             <>
               {reviews.edges.map(({node: review}) => {
@@ -84,13 +86,21 @@ export default function ProductLayout({ data: {product, reviews} }) {
           ) : (
             <>
               <div>
-                <h2>michelle lam</h2>
+                <Row>
+                  <Col xs="6">
+                    <h2>michelle lam</h2>
+                  </Col>
+                  <Col xs="6">
+                  <p className="product-rating">
+                    <Rating value={3}/>
+                  </p>
+                  </Col>
+                </Row>
+                
                 <p className="product-content">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam porttitor, velit ut vehicula vehicula, enim ante sollicitudin arcu, vitae vestibulum felis turpis eget eros. Nam pulvinar id metus nec pulvinar. Pellentesque nec mi eros. Suspendisse mollis eros non iaculis aliquam. Vivamus vitae metus sed dolor consequat tincidunt ut nec tortor. Nulla imperdiet augue in tristique tempus. Donec semper dui nec ante lacinia malesuada. Fusce eget ipsum non metus vulputate pellentesque. Nulla auctor ligula eu tristique imperdiet. Etiam orci sem, rutrum non gravida ac, aliquam quis leo. Cras lobortis auctor neque id fringilla. Ut lobortis aliquam dolor at cursus.
                 </p>
-                <p className="product-rating">
-                  <Rating value={3}/>
-                </p>
+                
               </div>
             </>
           )}

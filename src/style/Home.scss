@@ -19,6 +19,7 @@
 }
 
 .section-image {
+  border: 5rem solid #fff;
   z-index:1;
   content: '';
   position: absolute;
@@ -33,19 +34,12 @@
 
 .right {
   margin-left: 50%;
-  text-align: right;
 }
 
 .section-text {
-  text-align:right;
   width: 50%;
   margin-left: 50%;
   padding: 0 5%;
-
-  p {
-    text-align:right;
-    
-  }
 }
 
 .section-instagram {
