@@ -4,8 +4,6 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
   NavLink
 } from 'reactstrap';
 import '../style/Header.scss'
@@ -32,11 +30,6 @@ const Header = (props) => {
         </NavbarBrand>
 
         <Collapse isOpen={isOpen} navbar className="navbar-collapse collapse dual-nav w-50 order-2">
-          {/* <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/shop">Shop</NavLink>
-            </NavItem>
-          </Nav> */}
           <div className="shopping-cart ml-auto">
             <div className="Header__summary snipcart-summary snipcart-checkout">      
               <CartIcon className="cart-button" width={35} height={35}/>

@@ -19,17 +19,7 @@ const ShopNav = (props) => {
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem
-              onClick={() => setProductData(
-                  filterProducts(
-                    products, 
-                    {
-                      paintings: true,
-                      paintingType: 'canvas'
-                    }
-                  )
-                )
-              }
-            >
+              onClick={() => setProductData(filterProducts(products, {paintings: true, paintingType: 'canvas'}))}>
               Canvas
             </DropdownItem>
             <DropdownItem onClick={() => setProductData(filterProducts(products, {paintings: true, paintingType: 'print'}))}>

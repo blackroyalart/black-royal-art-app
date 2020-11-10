@@ -6,6 +6,7 @@ import aboutMePicture from '../img/home_page/about_me.jpg';
 import picture1 from '../img/home_page/image_1.jpg';
 import picture2 from '../img/home_page/image_2.jpg';
 import picture3 from '../img/home_page/image_3.jpg';
+
 import InstagramFeed from '../component/instagram-feed';
 
 export default function Index() {

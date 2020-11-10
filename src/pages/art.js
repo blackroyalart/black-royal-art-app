@@ -14,7 +14,7 @@ const Art = ({ data: { arts }}) => {
           {arts.edges.map(({node: art}) => (
               <Col xs="3">
                 <h1>{art.title}</h1>
-                <Img sizes={art.mainImage.sizes} />
+                <Img fluid={art.mainImage.sizes} />
               </Col>
             ))
           }

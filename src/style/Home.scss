@@ -1,7 +1,13 @@
 .landingImage {
   position: relative;
-  margin-bottom: -6%;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  height:500px;
+  width: auto;
+  margin: 0 auto;
 }
 
 .about-me {
@@ -47,11 +53,6 @@
   justify-content: center;
   height: auto;
   padding-bottom: 4em;
-}
-
-.section.section-instagram img:hover {
-  opacity: 1;
-  background-color: black;
 }
 
 .left {

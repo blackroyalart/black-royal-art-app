@@ -23,13 +23,15 @@ const Rating = ({value}) => {
   }
 
   function StarRating({val, type}) {
-    return(<>
-    {
-      Array.from({ length: val }, (_, k) => (
-        STAR_SHAPED_MAPPING[type]
-      ))
-    }
-    </>)
+    return(
+      <>
+        {
+          Array.from({ length: val }, (_, k) => (
+            STAR_SHAPED_MAPPING[type]
+          ))
+        }
+      </>
+    )
   }
 
   return (

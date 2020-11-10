@@ -32,7 +32,7 @@ const Shop = ({ data: { products }}) => {
                 productData.map(({ node: product }) => (
                   <div className="Catalogue__item" key={product.id}>
                     <a className="Product__image" href={`/${product.name}`}>
-                      <Img sizes={product.image.sizes} />
+                      <Img fluid={product.image.sizes} />
                       <div className="Product__details">
                         <div className="Product__name">
                           {product.name}
