@@ -10,16 +10,22 @@ import favicon from '../img/favicon.ico'
 import Helmet from 'react-helmet'
 
 const Layout = ({ children, site }) => (
+  <>
   <div className="page-container">
     <Helmet>
       <link rel="icon" href={favicon} />
+      <title>
+        Black Royal Art
+      </title>
     </Helmet>
+    
     <Header/>
     <div className="content">
       {children}
     </div>
     <Footer/>
   </div>
+  </>
 )
 
 Layout.propTypes = {
