@@ -13,7 +13,7 @@ const About = () => (
               A<div className="highlight">bout Me</div>
             </h1>
             <p>
-              Akwaaba! Hello Kings and Queens, my name is Eva Odoom. I am a Ghanaian Ameerican
+              Akwaaba! Hello Kings and Queens, my name is Eva Odoom. I am a Ghanaian American
               self-taught artist and am highly motivated by my culture and personal ties.
             </p>
             <p>
