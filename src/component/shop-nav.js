@@ -36,6 +36,11 @@ const ShopNav = (props) => {
         <NavItem>
           <NavLink onClick={() => setProductData(filterProducts(products, {custom: true}))}>Custom</NavLink>
         </NavItem>
+        {false && (
+          <NavItem>
+            <NavLink onClick={() => setProductData(filterProducts(products, {other: true}))}>Other</NavLink>
+          </NavItem>
+        )}
       </Nav>
     </div>
   );
