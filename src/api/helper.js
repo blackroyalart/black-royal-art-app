@@ -36,5 +36,11 @@
       return product.productType === 'custom'
     })
   }
+  
+  if (filter.other) {
+    return data.filter(({node: product}) => {
+      return product.productType === 'other'
+    })
+  }
 
 }
